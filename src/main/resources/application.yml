@@ -1,0 +1,19 @@
+info:
+  artifactId: '${project.name}'
+  version: '${project.version}'
+
+
+
+spring:
+  batch:
+    initialize-schema: ALWAYS
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC
+    username: root
+    password: 'root'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: none
